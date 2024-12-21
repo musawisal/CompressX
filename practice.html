@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online File Compressor</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span>compress</span>X
+        </div>
+        <ul class="nav-links">
+            <li class="compress-link">Compress</li>
+            <li class="analyze-link">Analyze</li>
+            <li class="about-link">About</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div id="uploadSection">
+            <h1>Online File Compressor</h1>
+            <p>Compress <strong>Word, JPEG</strong> and <strong>PNG</strong> files</p>
+            <div class="file-upload">
+                <form>
+                    <label for="file"> <i>📄</i> </label>
+                    <br><br>
+                    <input id="file" name="file" type="file" accept="image/jpeg, image/png">
+                    <br>
+                </form>
+            </div>
+            <form>
+                <button type="button" class="custom-button" onclick="showResults()">Compress</button>
+            </form>
+        </div>
+
+        <div id="result" class="result-container">
+            <h2 ><span class="purple">C</span>ompression <span class="purple">R</span>esults</h2>
+            <div class="images-container">
+                <div>
+                    <h2 class="heading">Original Image</h2>
+                    <img id="originalImage" src="" alt="Original">
+                </div>
+                <div>
+                    <h2 class="heading">Compressed Image</h2>
+                    <img id="compressedImage" src="" alt="Compressed">
+                </div>
+            </div>
+            <br>
+            <form>
+                <button type="button" class="custom-button" >Download</button>
+            </form>
+        </div>
+        
+        <div id="documentResult" class="result-container">
+            <h2><span class="purple">C</span>ompression <span class="purple">R</span>esults</h2>
+            <br>
+            <div id="documentSizes">
+                <h2 class="heading">Original Document Size: <span id="originalSize">0 KB</span></h2>
+                <h2 class="heading"><strong>Compressed Document Size: <span id="compressedSize">0 KB</strong></span></h2>
+            </div>
+            <br>
+            <form>
+                <button type="button" class="custom-button" >Download</button>
+            </form>         
+        </div>
+    </div>
+
+    <script src="practice.js"></script>
+</body>
+</html>
